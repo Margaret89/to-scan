@@ -1,0 +1,22 @@
+.header{
+	&__content{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 40px;
+	}
+
+	&__logo,
+	.main-menu,
+	&__actions{
+		width: calc(33.33% - 26.66px);
+	}
+
+	.main-menu{justify-content: center;}
+
+	&__actions{
+		display: flex;
+		justify-content: flex-end;
+		gap: 30px;
+	}
+}

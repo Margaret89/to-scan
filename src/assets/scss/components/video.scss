@@ -1,0 +1,50 @@
+/*-------------- video -----------------*/
+.video{
+	width: 315px;
+	max-width: 100%;
+	border-radius: 30px;
+	overflow: hidden;
+	position: relative;
+
+	&__content{
+		padding-bottom: 80%;
+		position: relative;
+	}
+
+	&__preview{
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transition: transform 0.2s ease 0s;
+	}
+
+	&__play{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 70px;
+		height: 70px;
+		background: url(../img/bg-play.svg) no-repeat center;
+		background-size: contain;
+		position: absolute;
+		right: 6px;
+		bottom: 6px;
+
+		&::after{
+			content: '';
+			display: inline-block;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 9px 0 9px 14px;
+			border-color: transparent transparent transparent #262C3C;
+
+		}
+	}
+
+	&:hover &__preview{transform: translate(-50%, -50%) scale(1.05);}
+}

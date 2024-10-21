@@ -1,0 +1,215 @@
+// /*-------------- tabs-page -----------------*/
+// .tabs-page{
+// 	&__list,
+// 	&__item{
+// 		@include reset-list;
+// 	}
+
+// 	&__item::before{display: none;}
+
+// 	&__list{
+// 		display: flex;
+// 		flex-wrap: wrap;
+// 		justify-content: center;
+// 		gap: 60px;
+// 		position: relative;
+// 	}
+
+// 	&__item{
+// 		@include font(none, none, 2rem, 1.3, none);
+// 		text-transform: uppercase;
+// 		padding-bottom: 5px;
+// 		position: relative;
+// 		cursor: pointer;
+
+// 		&::after{
+// 			content: '';
+// 			width: 0;
+// 			height: 1.5px;
+// 			background: var(--color-primary);
+// 			position: absolute;
+// 			bottom: 0;
+// 			left: 0;
+// 			transition: width 0.2s ease 0s;
+// 		}
+
+// 		&:hover::after,
+// 		&.active::after{
+// 			width: 100%;
+// 		}
+
+// 		&.active{cursor: auto;}
+// 	}
+
+// 	&__content-item{
+// 		display: none;
+// 		padding: 50px 0 0;
+
+// 		.unwrap-block{margin-bottom: 20px;}
+// 	}
+
+// 	&_line &__list{
+// 		justify-content: flex-start;
+// 		border-bottom: 1px solid var(--color-text);
+// 	}
+
+// 	&_line &__item{
+// 		text-transform: none;
+// 		padding-bottom: 8px;
+// 		padding-left: 85px;
+// 		padding-right: 85px;
+// 	}
+
+// 	&_line &__item:first-child{padding-left: 0;}
+// 	&_line &__item::after{background: var(--color-text);}
+
+// 	&_line &__content-item{
+// 		padding-top: 30px;
+// 		font-size: 1.4rem;
+// 		line-height: 1.5;
+
+// 		ol, ul, p{margin-bottom: 2.1rem;}
+// 		ol:last-child, ul:last-child, p:last-child{margin-bottom: 0;}
+// 	}
+
+// 	.reviews-list{margin-top: 36px;}
+
+// 	&_btn &__list{gap: 40px;}
+
+// 	&_btn &__item{
+// 		display: inline-flex;
+// 		align-items: center;
+// 		justify-content: center;
+// 		gap: 22px;
+// 		height: 5.6rem;
+// 		min-width: 290px;
+// 		background: transparent;
+// 		border: 2px solid var(--color-text);
+// 		border-radius: 2.8rem;
+// 		font-family: var(--font-site);
+// 		@include font(normal, 500, 1.4rem, 1.2, var(--color-text));
+// 		text-transform: uppercase;
+// 		text-decoration: none;
+// 		text-align: center;
+// 		padding: 0 25px;
+// 		cursor: pointer;
+// 		transition: all 0.2s ease 0s;
+
+// 		&::after{display: none;}
+
+// 		&:hover,
+// 		&.active{
+// 			background: var(--color-text);
+// 			color: #fff;
+// 		}
+// 	}
+
+// 	&_btn{
+// 		.advant{
+// 			padding: 0;
+// 			gap: 20px;
+
+// 			&__item{gap: 36px;}
+
+// 			&__val{
+// 				width: 110px;
+// 				height: 110px;
+
+// 				.icon,
+// 				img{
+// 					max-width: 50%;
+// 					max-height: 50%;
+// 				}
+// 			}
+
+// 			&__label{font-size: 2rem;}
+// 		}
+// 	}
+// }
+
+// @media (max-width: 1279px) {
+// 	.tabs-page{
+// 		&_line &__item{
+// 			padding-right: 25px;
+// 			padding-left: 25px;
+// 		}
+// 	}
+// }
+
+// @media (max-width: 991px) {
+// 	.tabs-page{
+// 		&__item{font-size: 1.8rem;}
+
+// 		&_btn{
+// 			.advant_column{
+// 				flex-direction: row;
+// 				gap: 40px;
+// 			}
+
+// 			.advant_column .advant__item{width: calc(50% - 20px);}
+// 		}
+// 	}
+// }
+
+// @media (max-width: 767px) {
+// 	.tabs-page{
+// 		&__list{gap: 35px;}
+// 		&__item{font-size: 1.3rem;}
+// 		&__item::after{height: 1px;}
+
+// 		&_line &__list{gap: 5px;}
+
+// 		&_line &__item{
+// 			font-size: 1.2rem;
+// 			padding-left: 5px;
+// 			padding-right: 5px;
+// 		}
+
+// 		&_line &__content-item{
+// 			font-size: 1rem;
+// 			padding-top: 15px;
+
+// 			ol, ul, p{margin-bottom: 1.5rem;}
+// 		}
+
+// 		.reviews-list{margin-top: 3px;}
+
+// 		&_btn &__list{gap: 4px;}
+
+// 		&_btn &__item{
+// 			height: 3rem;
+// 			min-width: 0;
+// 			border-radius: 1.5rem;
+// 			font-size: 0.7rem;
+// 			padding: 0 30px;
+// 		}
+
+// 		&_btn{
+// 			.advant_column{
+// 				gap: 16px;
+// 				.advant__label{font-size: 1.1rem;}
+		
+// 				.advant__item{
+// 					width: 100%;
+// 					flex-direction: row;
+// 					gap: 10px;
+// 				}
+		
+// 				.advant__label{text-align: left;}
+		
+// 				.advant__val{
+// 					width: 56px;
+// 					height: 56px;
+
+// 					.icon,
+// 					img{
+// 						max-width: 70%;
+// 						max-height: 70%;
+// 					}
+// 				}
+// 			}
+// 		}
+		
+
+// 	}
+// }

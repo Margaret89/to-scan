@@ -1,0 +1,19 @@
+/*-------------- main-menu -----------------*/
+.main-menu{
+	display: inline-flex;
+	gap: 40px;
+
+	ul,
+	li{
+		@include reset-list;
+	}
+
+	li{
+		font-size: 1.8rem;
+		
+		a{
+			color: var(--color-primary);
+			text-decoration: none;
+		}
+	}
+}
