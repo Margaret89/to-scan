@@ -1,0 +1,35 @@
+@font-face {
+	font-family: 'Moderustic';
+	src: local('Moderustic Regular'), local('Moderustic-Regular'),
+		url('#{$path-fonts}/Moderustic/Moderustic-Regular.woff') format('woff'),
+		url('#{$path-fonts}/Moderustic/Moderustic-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Moderustic';
+	src: local('Moderustic Bold'), local('Moderustic-Bold'),
+		url('#{$path-fonts}/Moderustic/Moderustic-Bold.woff') format('woff'),
+		url('#{$path-fonts}/Moderustic/Moderustic-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Moderustic';
+	src: local('Moderustic Medium'), local('Moderustic-Medium'),
+		url('#{$path-fonts}/Moderustic/Moderustic-Medium.woff') format('woff'),
+		url('#{$path-fonts}/Moderustic/Moderustic-Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Moderustic';
+	src: local('Moderustic Medium'), local('Moderustic-SemiBold'),
+		url('#{$path-fonts}/Moderustic/Moderustic-SemiBold.woff') format('woff'),
+		url('#{$path-fonts}/Moderustic/Moderustic-SemiBold.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+}

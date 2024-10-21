@@ -1,0 +1,16 @@
+@import "utils/vars";
+
+// bootstrap
+@import "~bootstrap/scss/bootstrap-grid";
+
+// Наш сайт
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/reset";
+
+@import "layouts/main";
+@import "layouts/header";
+@import "layouts/footer";
+
+@import "components/icons";
+@import "components/type-icon";
