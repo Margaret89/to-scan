@@ -1,0 +1,37 @@
+/*-------------- breadcrumb -----------------*/
+.breadcrumb{
+	&,
+	&__item{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&{
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0 35px;
+		margin: 20px 0;
+	}
+
+	&__item{
+		@include font(none, none, 1.6rem, none, #8E8F9B);
+
+		a{
+			color: #262C3C;
+			text-decoration: none;
+			transition: color 0.2s ease 0s;
+		}
+
+		a:hover{color: var(--color-primary-hover);}
+	}
+
+	&__item:not(:last-child){margin-right: 10px;}
+
+	&__item:not(:last-child)::after{
+		content: '/';
+		display: inline-block;
+		margin-left: 10px;
+		margin-bottom: -2px;
+	}
+}

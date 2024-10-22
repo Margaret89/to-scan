@@ -170,6 +170,16 @@ button.btn{
 .text-bold {font-weight: 700 !important;}
 .text-color {color: var(--color-primary) !important;}
 
+.header-page{
+	margin-bottom: 20px;
+
+	&__content{
+		padding: 10px 35px;
+
+		h1,.h1{margin: 0;}
+	}
+}
+
 
 // @media (max-width: 991px) {
 // 	:root{

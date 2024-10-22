@@ -12,7 +12,7 @@ if ($('.js-tabs-page').length) {
 
 	$('.js-tabs-page-item').on('click',function(e) {
 		e.preventDefault();
-		var $parent = $(this).parents('.js-tabs-page');
+		var $parent = $(this).closest('.js-tabs-page');
 
 		$parent.find('.js-tabs-page-content-item').hide();
 		$parent.find('.js-tabs-page-item').removeClass('active');

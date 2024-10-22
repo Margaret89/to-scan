@@ -1,0 +1,137 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Блог';
+	- var h1 = 'Блог';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Блог'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.articles-page
+		.container
+			.row
+				.col-12
+					.articles-page__nav
+						.tags
+							-
+								var list=[
+									{text:'Тег 1'},
+									{text:'Тег 2'},
+									{text:'Тег 3', status:'active'},
+									{text:'Тег 4'},
+									{text:'Тег 5'},
+								]
+							each item in list
+								a.tags__item(class=item.status?'active':'')= item.text
+
+			.row
+				.col-9
+					.articles-list
+						-
+							var list=[
+								{
+									img:'article.jpg',
+									author:'И. Длиннофамильный',
+									name:'Название статьи',
+									tags: ['Тег 1', 'Тег 2', 'Тег 3'],
+									text:"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining."
+								},
+								{
+									img:'article.jpg',
+									author:'И. Длиннофамильный',
+									name:'Название статьи',
+									tags: ['Тег 1', 'Тег 2'],
+									text:"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining."
+								},
+								{
+									img:'article.jpg',
+									author:'И. Длиннофамильный',
+									name:'Название статьи',
+									tags: ['Тег 1', 'Тег 2'],
+									text:"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining."
+								},
+								{
+									img:'article.jpg',
+									author:'И. Длиннофамильный',
+									name:'Название статьи',
+									tags: ['Тег 1'],
+									text:"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining."
+								},
+								{
+									img:'article.jpg',
+									author:'И. Длиннофамильный',
+									name:'Название статьи',
+									tags: ['Тег 1', 'Тег 2'],
+									text:"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining."
+								},
+							]
+						each item in list
+							article.article-item
+								a(href="#").article-item__img-wrap
+									.article-item__img
+										img(src="assets/img/"+item.img, alt="")
+
+								.article-item__content
+									.article-item__top
+										.article-item__author
+											+svg('ic-user','ic-user', '24', '24')
+											=item.author
+
+										.article-item-actions
+											.article-item-actions__item
+												.article-item-actions__icon
+													+svg('ic-like','ic-like', '22', '22')
+												.article-item-actions__val 25
+
+											.article-item-actions__item
+												.article-item-actions__icon
+													+svg('ic-eye','ic-eye', '24', '24')
+												.article-item-actions__val 15
+
+											.article-item-actions__item
+												.article-item-actions__icon
+													+svg('ic-calendar','ic-calendar', '24', '24')
+												.article-item-actions__val 22.10.2024
+										
+									h1.article-item__title
+										a(href="#")= item.name
+
+									.tags
+										each tag in item.tags
+											.tags__item= tag
+
+									.article-item__desc= item.text
+
+									a(href="#").link-more Читать все
+										+svg('ic-arrow-right','ic-arrow-right', '24', '24')
+
+					.pager
+						span.pager__nav.disable
+							+svg('ic-arr-left','ic-arr-left', '6', '10')
+
+						a.pager__item(href='#') 1
+						a.pager__item.active(href='#') 2
+						span.pager__item(href='#') ...
+						a.pager__item(href='#') 28
+
+						a.pager__nav(href="")
+							+svg('ic-arr-right','ic-arr-right', '6', '10')
+
+				.col-3
+					.info-block
+						.info-block__img
+							img(src="assets/img/art2.jpg", alt="")
+
+						.info-block__content
+							h2.info-block__title Название Реклами
+
+							.info-block__text Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+
+							a(href="#").btn Попробовать бесплатно

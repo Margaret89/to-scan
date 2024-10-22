@@ -1,13 +1,15 @@
 mixin h1(v)
-	.container
-		.row
-			.col-12
-				h1= v
+	section.header-page
+		.container
+			.row
+				.col-12
+					.header-page__content
+						h1= v
 
 
 mixin breadcrumbs(links)
 	- var len=links.length
-	.container.d-none.d-md-block
+	section.container.d-none.d-md-block
 		.row
 			.col-12
 				ul.breadcrumb

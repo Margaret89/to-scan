@@ -1,0 +1,24 @@
+/*-------------- tags -----------------*/
+.tags{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+
+	&__item{
+		padding: 7px 12px 6px;
+		border-radius: 8px;
+		background: #F1F2F8;
+		font-size: 1.4rem;
+		line-height: 1;
+		color: #535460;
+		text-decoration: none;
+		white-space: nowrap;
+		transition: all 0.2s ease 0s;
+	}
+}
+
+a.tags__item:hover,
+a.tags__item.active{
+	background: var(--color-primary);
+	color: #fff;
+}

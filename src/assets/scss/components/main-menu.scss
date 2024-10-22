@@ -12,13 +12,34 @@
 
 	li{
 		font-size: 1.8rem;
+		position: relative;
 		
 		a{
+			display: block;
 			color: #21222D;
 			text-decoration: none;
 			transition: color 0.2s ease 0s;
+			padding: 5px 0;
+
+			&::after{
+				content: '';
+				width: 0;
+				height: 2px;
+				background: var(--color-primary);
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				transition: width 0.2s ease 0s;
+			}
 		}
 
-		a:hover{color: var(--color-primary);}
+		a:hover{
+			color: var(--color-primary);
+		}
+
+		a:hover::after,
+		&.current-menu-item a::after{
+			width: 100%;
+		}
 	}
 }
