@@ -1,0 +1,65 @@
+/*-------------- services-list -----------------*/
+.services-wrap{
+	&__content{
+		max-width: 233px;
+		font-size: 1.6rem;
+
+		.h1, .h2, h1, h2{margin-bottom: 2rem;}
+	}
+}
+
+.services-list{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+
+	&_col-4 .service-item{width: calc(25% - 7.5px);}
+	&_col-4 .service-item_big{width: calc(75% - 5px);}
+}
+
+.service-item{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 30px;
+	width: calc(33.33% - 6.66px);
+	min-height: 262px;
+	border-radius: 20px;
+	background: #FEF9F5;
+	padding: 30px;
+	transition: background-color 0.2s ease 0s;
+
+	&__icon{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		width: 32px;
+		height: 32px;
+
+		.icon{
+			fill: #535460;
+			transition: fill 0.2s ease 0s;
+		}
+	}
+
+	&__text{
+		@include font(none, none, 1.6rem, 1.5, #21222D);
+		transition: color 0.2s ease 0s;
+	}
+
+	&:hover,
+	&.active{
+		background: var(--color-primary);
+	}
+
+	&:hover &__icon .icon,
+	&.active &__icon .icon{
+		fill: #fff;
+	}
+
+	&:hover &__text,
+	&.active  &__text{
+		color: #fff;
+	}
+}

@@ -1,0 +1,31 @@
+/*-------------- list-custom -----------------*/
+.list-custom{
+	&,
+	&__item{
+		@include reset-list;
+	}
+
+	&{counter-reset: num;}
+
+	&__item::before{
+		content: counter(num); 
+		counter-increment: num;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		background: var(--color-primary);
+		@include font(none, 500, 1.6rem, 1, #fff);
+	}
+
+	&__item{
+		display: flex;
+		gap: 20px;
+		font-size: 1.6rem;
+		color: #21222D;
+		margin-bottom: 20px;
+	}
+}

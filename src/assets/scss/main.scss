@@ -3,6 +3,12 @@
 // bootstrap
 @import "~bootstrap/scss/bootstrap-grid";
 
+// fancybox
+@import '~@fancyapps/ui/dist/fancybox.css';
+
+// swiper
+@import '~swiper/swiper-bundle.css';
+
 // Наш сайт
 @import "utils/mixins";
 @import "utils/fonts";
@@ -15,7 +21,15 @@
 @import "components/icons";
 @import "components/type-icon";
 @import "components/tabs-page";
+@import "components/tabs-page-vertical";
 @import "components/main-menu";
 @import "components/social";
 @import "components/top-block";
 @import "components/video";
+@import "components/list-custom";
+@import "components/services-list";
+@import "components/opportunity";
+@import "components/cases-slider";
+@import "components/info-panel";
+@import "components/about";
+@import "components/plans-wrap";

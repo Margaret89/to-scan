@@ -1,19 +1,24 @@
 /*-------------- main-menu -----------------*/
 .main-menu{
-	display: inline-flex;
-	gap: 40px;
-
 	ul,
 	li{
 		@include reset-list;
+	}
+
+	ul{
+		display: inline-flex;
+		gap: 40px;
 	}
 
 	li{
 		font-size: 1.8rem;
 		
 		a{
-			color: var(--color-primary);
+			color: #21222D;
 			text-decoration: none;
+			transition: color 0.2s ease 0s;
 		}
+
+		a:hover{color: var(--color-primary);}
 	}
 }
