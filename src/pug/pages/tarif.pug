@@ -1,0 +1,102 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Тарифы';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Тарифы'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.tariffs
+		.container
+			.row
+				.col-10.offset-1
+					.tariffs__top
+						.tariffs__title Тестовый период
+							span.tariffs__tag 2 недели
+
+						.tariffs__subtitle Сканируем 10 000 страниц ежедневно бесплатно
+
+						a(href="#").btn Сканировать
+
+					.tariffs-type
+						.tariffs-type__item.active Месяц
+
+						.tariffs-type__item Год
+							.tariffs-type__label -20
+								span.tariffs-type__percent %
+
+					.tariffs-slider
+						.tariffs-slider__label Число страниц для ежедневного сканирования
+
+						.tariffs-slider__content
+							.slider-range
+								.slider-range__field
+									#slider-range.js-slider-range(data-min="1000", data-max="5000000", data-cur-min="1000",data-cur-max="2500000", autocomplete="off")
+
+								.slider-range__labels
+									.slider-range__val 1 000
+									.slider-range__val 5 000 000
+
+					.tariffs-list
+						-
+							var list=[
+								{title:'1 месяц', price:'7.00 USD'},
+								{title:'6 месяцев', price:'7.00 USD', status:'active'},
+								{title:'Индивидуальный', price:'от 40.00 USD'},
+							]
+						each item in list
+							.tariff-item(class=item.status?'active':'')
+								.tariff-item__title= item.title
+
+								.tariff-item-price
+									.tariff-item-price__label Цена
+									.tariff-item-price__val= item.price
+
+								.tariff-item-params
+									.tariff-item-params__item
+										.tariff-item-params__label Строк хранения данных
+										.tariff-item-params__val 1 месяц
+
+									.tariff-item-params__item
+										.tariff-item-params__label Themes:
+										.tariff-item-params__val 20
+
+									.tariff-item-params__item
+										.tariff-item-params__label Дополнительные 100 стр
+										.tariff-item-params__val 20
+
+									.tariff-item-params__item
+										.tariff-item-params__label Число проекта:
+										.tariff-item-params__val 20
+
+									.tariff-item-params__item
+										.tariff-item-params__label Число мониторингов контента:
+										.tariff-item-params__val 20
+
+									.tariff-item-params__item
+										.tariff-item-params__label Число пользователей:
+										.tariff-item-params__val 1.95 GiB
+
+								a(href="#").btn.btn_border Попробовать сейчас
+
+	section.about-wrap.mt-indent
+		.container
+			.row
+				.col-10.offset-1
+					.about
+						.about__content
+							h2.h3 Заголовок
+
+							p Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+							a.btn(href='#') Попробовать бесплатно
+
+						.about__img
+							img(src="assets/img/about.jpg", alt="")

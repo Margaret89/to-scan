@@ -9,6 +9,9 @@
 // swiper
 @import '~swiper/swiper-bundle.css';
 
+// nouislider
+@import 'nouislider/dist/nouislider';
+
 // Наш сайт
 @import "utils/mixins";
 @import "utils/fonts";
@@ -38,3 +41,5 @@
 @import "components/pager";
 @import "components/info-block";
 @import "components/breadcrumb";
+@import "components/tariffs";
+@import "components/slider-range";

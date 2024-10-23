@@ -108,7 +108,7 @@ button.btn{
 	gap: 10px;
 	height: 5rem;
 	background: var(--color-primary);
-	border: 1px solid var(--color-primary);
+	border: 2px solid var(--color-primary);
 	border-radius: 14px;
 	@include font(none, none, 1.6rem, 1.2, #fff);
 	text-decoration: none;
@@ -129,11 +129,23 @@ button.btn{
 	}
 
 	&:hover{
+		border-color: var(--color-primary-hover);
 		box-shadow: inset 0 -5.4em 0 0 var(--color-primary-hover);
 		color: #fff;
 	}
 
 	&_small{height: 4rem;}
+
+	&_border{
+		background: transparent;
+		color: #21222D;
+	}
+
+	&_border:hover{
+		border-color: var(--color-primary-hover);
+		box-shadow: inset 0 -5.4em 0 0 var(--color-primary-hover);
+		color: #fff;
+	}
 }
 
 .m-indent{
