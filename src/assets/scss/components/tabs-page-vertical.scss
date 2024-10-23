@@ -24,6 +24,8 @@
 		position: relative;
 		cursor: pointer;
 
+		&::before{display: none;}
+
 		&::after{
 			content: '';
 			width: 0;

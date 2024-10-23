@@ -1,0 +1,33 @@
+/*-------------- design-block -----------------*/
+.design-block{
+	padding: 100px 75px;
+	border-radius: 30px;
+	position: relative;
+	background: rgba(253,241,231,0.4);
+	background: -moz-linear-gradient(top, rgba(253,241,231,0.4) 0%, rgba(232,238,242,0.4) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(253,241,231,0.4)), color-stop(100%, rgba(232,238,242,0.4)));
+	background: -webkit-linear-gradient(top, rgba(253,241,231,0.4) 0%, rgba(232,238,242,0.4) 100%);
+	background: -o-linear-gradient(top, rgba(253,241,231,0.4) 0%, rgba(232,238,242,0.4) 100%);
+	background: -ms-linear-gradient(top, rgba(253,241,231,0.4) 0%, rgba(232,238,242,0.4) 100%);
+	background: linear-gradient(to bottom, rgba(253,241,231,0.4) 0%, rgba(232,238,242,0.4) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdf1e7', endColorstr='#e8eef2', GradientType=0 );
+	overflow: hidden;
+	margin: 50px 0;
+
+	&::before{
+		content: '';
+		display: block;
+		width: 1400px; 
+		height: 910px;
+		background: var(--color-primary);
+		border-radius: 700px/455px;
+		filter: blur(400px);
+		position: absolute;
+		top: 30px;
+		left: -530px;
+		opacity: 0.1;
+	}
+
+	img{margin: 0;}
+	p+img{margin-top: 22px;}
+}

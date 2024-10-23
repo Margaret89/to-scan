@@ -20,6 +20,8 @@
 		cursor: pointer;
 		transition: color 0.2s ease 0s;
 
+		&::before{display: none;}
+
 		&::after{
 			content: '';
 			width: 0;

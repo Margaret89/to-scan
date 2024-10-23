@@ -1,0 +1,205 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Блог детальная';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Блог'},
+			{href:'#',name:'Назва статьи'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.article-detail
+		.container
+			.row
+				.col-12
+					.article-detail__top
+						.article-detail__main
+							h1 Lorem ipsum dolor sit amet
+
+							.article-actions
+								.article-actions__item
+									.article-actions__icon
+										+svg('ic-like','ic-like', '22', '22')
+									.article-actions__val 25
+
+								.article-actions__item
+									.article-actions__icon
+										+svg('ic-eye','ic-eye', '24', '24')
+									.article-actions__val 15
+
+								.article-actions__item
+									.article-actions__icon
+										+svg('ic-calendar','ic-calendar', '24', '24')
+									.article-actions__val 22.10.2024
+
+							.article-detail__info
+								.article-detail-article
+									.article-detail-article__img
+										img(src="assets/img/ava.jpg", alt="")
+
+									.article-detail-article__content
+										.article-detail-article__name И. Длиннофамильный
+										.article-detail-article__post Совладелец рекламного агенства “Ковалевы”
+
+								.social
+									a(href="#").social__item
+										+svg('ic-vk','ic-vk', '23', '23')
+
+									a(href="#").social__item
+										+svg('ic-telegram','ic-telegram', '23', '19')
+
+									a(href="#").social__item
+										+svg('ic-youtube','ic-youtube', '24', '16')
+
+							.share
+								.share__label Share this article: 
+
+								.social
+									a(href="#").social__item
+										+svg('ic-vk','ic-vk', '23', '23')
+
+									a(href="#").social__item
+										+svg('ic-telegram','ic-telegram', '23', '19')
+
+						.article-detail__img
+							img(src="assets/img/article.jpg", alt="")
+
+			.row
+				.col-10.offset-1
+					.article-detail__desc
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut erat ac augue malesuada blandit a eu lacus. Sed placerat vehicula posuere. Suspendisse suscipit arcu quis tristique ultrices. Morbi ipsum mauris, luctus et mi sed, porttitor feugiat ex. Sed eget eleifend mi. Proin facilisis, velit sit amet tempor dictum, diam lorem consequat purus, sed eleifend diam nunc at urna. Ut et justo dui. Cras sed lectus molestie, accumsan erat ut, elementum magna. Donec at mauris et dolor tristique imperdiet. Pellentesque eu pellentesque dolor. Maecenas tempor elit ut nisl interdum vulputate. Cras felis elit, suscipit ut volutpat tincidunt, ultricies suscipit magna. Nam accumsan turpis magna, vitae sagittis purus ultrices sed.
+
+						a(href="assets/img/sample-5s.mp4", data-fancybox, data-width="640", data-height="360").video-page
+							.video-page__content
+								.video-page__preview(style="background-image: url(assets/img/video-article.jpg)")
+								.video-page__play
+
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut erat ac augue malesuada blandit a eu lacus. Sed placerat vehicula posuere.
+						p Suspendisse suscipit arcu quis tristique ultrices. Morbi ipsum mauris, luctus et mi sed, porttitor feugiat ex. Sed eget eleifend mi. Proin facilisis, velit sit amet tempor dictum, diam lorem consequat purus, sed eleifend diam nunc at urna. Ut et justo dui. Cras sed lectus molestie, accumsan erat ut, elementum magna. Donec at mauris et dolor tristique imperdiet. Pellentesque eu pellentesque dolor. Maecenas tempor elit ut nisl interdum vulputate. Cras felis elit, suscipit ut volutpat tincidunt, ultricies suscipit magna. Nam accumsan turpis magna, vitae sagittis purus ultrices sed.
+
+						.design-block
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut erat ac augue malesuada blandit a eu lacus. Sed placerat vehicula posuere. Suspendisse suscipit arcu quis tristique ultrices. Morbi ipsum mauris, luctus et mi sed, porttitor feugiat ex. Sed eget eleifend mi. Proin facilisis, velit sit amet tempor dictum, diam lorem consequat purus, sed eleifend diam nunc at urna. Ut et justo dui. Cras sed lectus molestie, accumsan erat ut, elementum magna. Donec at mauris et dolor tristique imperdiet. Pellentesque eu pellentesque dolor. Maecenas tempor elit ut nisl interdum vulputate. Cras felis elit, suscipit ut volutpat tincidunt, ultricies suscipit magna. Nam accumsan turpis magna, vitae sagittis purus ultrices sed.
+
+							img(src="assets/img/pic.jpg", alt="").img-border
+
+						h2.h3 Lorem ipsum dolor sit amet
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut erat ac augue malesuada blandit a eu lacus. Sed placerat vehicula posuere. Suspendisse suscipit arcu quis tristique ultrices. Morbi ipsum mauris, luctus et mi sed, porttitor feugiat ex. Sed eget eleifend mi. Proin facilisis, velit sit amet tempor dictum, diam lorem consequat purus, sed eleifend diam nunc at urna. Ut et justo dui. Cras sed lectus molestie, accumsan erat ut, elementum magna. 
+
+						ul
+							li Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+							li Sed ut erat ac augue malesuada blandit a eu lacus. Sed placerat vehicula posuere. Suspendisse suscipit arcu quis tristique ultrices. 
+							li Morbi ipsum mauris, luctus et mi sed, porttitor feugiat ex. Sed eget eleifend mi. Proin facilisis, velit sit amet tempor dictum, diam lorem consequat purus, sed eleifend diam nunc at urna. 
+							li Ut et justo dui. Cras sed lectus molestie, accumsan erat ut, elementum magna. Donec at mauris et dolor tristique imperdiet. Pellentesque eu pellentesque dolor. 
+
+						
+						img(src="assets/img/pic2.jpg", alt="").img-border.img-center
+
+						p Aliquam hendrerit velit eget finibus placerat. Fusce egestas elit ut augue eleifend, vitae lobortis orci vehicula. Morbi vel risus sed turpis euismod bibendum. Quisque condimentum sed odio sit amet ultricies. Integer accumsan sit amet dolor luctus iaculis. Nullam vel nibh et libero gravida aliquam vel dignissim mauris. Sed ut pellentesque metus. Ut quis rutrum eros, nec dignissim turpis. Nullam a blandit lacus, vitae luctus arcu.
+
+						blockquote.wp-block-quote
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis vel diam a interdum. Vivamus malesuada elementum scelerisque. Curabitur elementum et urna eget placerat.
+							cite Homer Simpson
+
+						p Maecenas tincidunt, dui eget volutpat semper, ex arcu scelerisque enim, nec vehicula nibh ante vitae libero. Fusce cursus dui leo, quis laoreet est ultricies ut. Nunc ornare leo quis tortor facilisis, at porta risus porta. Sed vitae consectetur augue. Integer consequat ex dolor, nec pharetra urna pellentesque non. Suspendisse erat diam, vestibulum at eros ut, pretium gravida odio. Nullam ultrices porta ipsum, vel tincidunt tortor consectetur et.
+
+	section.other-articles.last-elem
+		.container
+			.row
+				.col-12
+					.other-articles__info
+						h2.h1 Вам так же будет интересно
+						p Можем сканировать до 2 миллионов страниц в рамках одного домена (если у вас больше, мы сможем придумать для вас индивидуальные условия)
+
+					.articles-slider-wrap
+						.swiper.articles-slider.js-articles-slider
+							.swiper-wrapper
+								-
+									var list=[
+										{
+											img:'article.jpg',
+											author:'И. Длиннофамильный',
+											name:'Название статьи',
+											tags: ['Тег 1', 'Тег 2', 'Тег 3'],
+											text:"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining."
+										},
+										{
+											img:'article.jpg',
+											author:'И. Длиннофамильный',
+											name:'Название статьи',
+											tags: ['Тег 1', 'Тег 2'],
+											text:"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining."
+										},
+										{
+											img:'article.jpg',
+											author:'И. Длиннофамильный',
+											name:'Название статьи',
+											tags: ['Тег 1', 'Тег 2'],
+											text:"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining."
+										},
+										{
+											img:'article.jpg',
+											author:'И. Длиннофамильный',
+											name:'Название статьи',
+											tags: ['Тег 1'],
+											text:"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining."
+										},
+										{
+											img:'article.jpg',
+											author:'И. Длиннофамильный',
+											name:'Название статьи',
+											tags: ['Тег 1', 'Тег 2'],
+											text:"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining."
+										},
+									]
+								each item in list
+									.swiper-slide
+										article.article-item
+											a(href="#").article-item__img-wrap
+												.article-item__img
+													img(src="assets/img/"+item.img, alt="")
+
+											.article-item__content
+												.article-item__top
+													.article-item__author
+														+svg('ic-user','ic-user', '24', '24')
+														=item.author
+
+													.article-actions
+														.article-actions__item
+															.article-actions__icon
+																+svg('ic-like','ic-like', '22', '22')
+															.article-actions__val 25
+
+														.article-actions__item
+															.article-actions__icon
+																+svg('ic-eye','ic-eye', '24', '24')
+															.article-actions__val 15
+
+														.article-actions__item
+															.article-actions__icon
+																+svg('ic-calendar','ic-calendar', '24', '24')
+															.article-actions__val 22.10.2024
+													
+												h1.article-item__title
+													a(href="#")= item.name
+
+												.tags
+													each tag in item.tags
+														.tags__item= tag
+
+												.article-item__desc= item.text
+
+												a(href="#").link-more Читать все
+													+svg('ic-arrow-right','ic-arrow-right', '24', '24')
+
+						.swiper-button-prev.js-articles-slider-prev
+							+svg('ic-arrow-left','ic-arrow-left', '24', '24')
+
+						.swiper-button-next.js-articles-slider-next
+							+svg('ic-arrow-right','ic-arrow-right', '24', '24')

@@ -17,6 +17,8 @@
 	&__item{
 		@include font(none, none, 1.6rem, none, #8E8F9B);
 
+		&::before{display: none;}
+
 		a{
 			color: #262C3C;
 			text-decoration: none;
