@@ -63,3 +63,25 @@
 		color: #fff;
 	}
 }
+
+@media (max-width: 991px) {
+	.services-wrap{
+		&__content{max-width: none;}
+	}
+
+	.services-list{
+		&_col-4 .service-item{width: calc(33.33% - 6.66px);}
+	}
+}
+
+@media (max-width: 767px) {
+	.service-item{
+		width: 100%;
+		min-height: 0;
+		padding: 15px;
+	}
+
+	.services-list{
+		&_col-4 .service-item{width: 100%;}
+	}
+}

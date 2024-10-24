@@ -49,3 +49,43 @@
 
 	.btn{padding: 0 25px;}
 }
+
+@media (max-width: 1419px) {
+	.footer{
+		&__wrap{
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.footer{
+		&__bottom{
+			flex-direction: column;
+			gap: 10px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.footer{
+		&__top{flex-direction: column;}
+
+		&__content{
+			flex-direction: column;
+			.main-menu{margin: 0;}
+		}
+
+		&__links{
+			flex-direction: column;
+			gap: 5px;
+			margin-top: 15px;
+		}
+
+		&__copyright,
+		&__links{
+			font-size: 1.5rem;
+		}
+	}
+}

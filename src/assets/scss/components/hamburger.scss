@@ -1,0 +1,73 @@
+/*-------------- hamburger -----------------*/
+.ic-hamburger {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	width: 40px;
+	height: 40px;
+	font-size: 0;
+	text-indent: -9999px;
+	appearance: none;
+	box-shadow: none;
+	border-radius: 14px;
+	border: 1px solid var(--color-primary);
+	cursor: pointer;
+	transition: background-color 0.3s;
+
+	&:focus {outline: none;}
+	
+	span {
+		display: block;
+		width: calc(100% - 16px);
+		position: absolute;
+		top: 18px;
+		left: 8px;
+		right: 0px;
+		height: 2px;
+		background: var(--color-primary);
+	}
+	
+	 span::before,
+	 span::after {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 100%;
+		left: 0;
+		height: 2px;
+		background-color: var(--color-primary);
+	}
+	
+	span::before {top: -7px;}
+	span::after {bottom: -7px;}
+	
+	span::before {transition: top 0.3s ease 0.3s, transform 0.3s ease 0s;}
+	span::after {transition: bottom 0.3s ease 0.3s, transform 0.3s ease 0s;}
+	
+	&.active span {background: none;}
+	
+	&.active span::before {
+		top: 0;
+		transform: rotate(45deg);
+	}
+	
+	&.active span::after {
+		bottom: 0;
+		transform: rotate(-45deg);
+	}
+	
+	&.active span::before {transition: top 0.3s ease 0s, transform 0.3s ease 0.3s;}
+	&.active span::after {transition: bottom 0.3s ease 0s, transform 0.3s ease 0.3s;}
+
+	&:hover span,
+	&:hover span::before,
+	&:hover span::after{
+		background: var(--color-primary);
+	}
+
+	&.active:hover span{background: transparent;}
+}
+

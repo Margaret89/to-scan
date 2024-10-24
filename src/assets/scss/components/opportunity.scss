@@ -2,3 +2,9 @@
 .opportunity{
 	.tabs-page-vertical{margin-top: 40px;}
 }
+
+@media (max-width: 767px) {
+	.opportunity{
+		.tabs-page-vertical{margin-top: 20px;}
+	}
+}

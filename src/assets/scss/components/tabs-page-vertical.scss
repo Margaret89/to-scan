@@ -83,3 +83,34 @@
 		margin-top: 20px;
 	}
 }
+
+@media (max-width: 991px) {
+	.tabs-page-vertical{
+		flex-direction: column;
+
+		&__list{
+			width: auto;
+			flex-direction: row;
+			gap: 20px;
+			margin-left: -20px;
+			margin-right: -20px;
+			padding-left: 20px;
+			padding-right: 20px;
+			overflow-x: auto;
+			padding-bottom: 10px;
+		}
+
+		&__item{white-space: nowrap;}
+		&__item::after{bottom: -4px;}
+	}
+}
+
+@media (max-width: 767px) {
+	.tabs-page-vertical{
+		&__item{font-size: 1.6rem;}
+		&__content-item{padding: 15px;}
+
+		.list-custom-column{column-count: 1;}
+		.btn{padding: 0 10px;}
+	}
+}

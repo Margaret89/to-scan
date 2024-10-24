@@ -45,3 +45,10 @@
 		}
 	}
 }
+
+@media (max-width: 991px) {
+	.main-menu{
+		ul{gap: 20px;}
+		li{font-size: 1.6rem;}
+	}
+}

@@ -72,3 +72,15 @@ if($('.js-slider-range').length){
 		});
 	});
 }
+
+if($('.js-open-menu').length){
+	//Открыть мобильное меню
+	$('.js-open-menu').on('click', function(){
+		$('.js-main-menu').addClass('open');
+	});
+
+	//Закрыть мобильное меню
+	$('.js-close-menu').on('click', function(){
+		$('.js-main-menu').removeClass('open');
+	});
+}

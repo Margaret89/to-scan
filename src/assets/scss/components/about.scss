@@ -18,3 +18,20 @@
 		.btn{margin-top: 30px;}
 	}
 }
+
+@media (max-width: 1279px) {
+	.about{gap: 40px;}
+}
+
+@media (max-width: 767px) {
+	.about{
+		flex-direction: column-reverse;
+		gap: 20px;
+
+		&__img{max-width: none;}
+
+		&__content{
+			.btn{margin-top: 10px;}
+		}
+	}
+}

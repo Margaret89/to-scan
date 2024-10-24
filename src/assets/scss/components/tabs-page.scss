@@ -52,89 +52,27 @@
 	}
 }
 
-// @media (max-width: 1279px) {
-// 	.tabs-page{
-// 		&_line &__item{
-// 			padding-right: 25px;
-// 			padding-left: 25px;
-// 		}
-// 	}
-// }
+@media (max-width: 991px) {
+	.tabs-page{
+		&__list{
+			justify-content: flex-start;
+			flex-wrap: nowrap;
+			margin-left: -20px;
+			margin-right: -20px;
+			padding-left: 20px;
+			padding-right: 20px;
+			overflow-x: auto;
+		}
 
-// @media (max-width: 991px) {
-// 	.tabs-page{
-// 		&__item{font-size: 1.8rem;}
+		&__item{
+			white-space: nowrap;
+			padding-bottom: 8px;
+		}
+	}
+}
 
-// 		&_btn{
-// 			.advant_column{
-// 				flex-direction: row;
-// 				gap: 40px;
-// 			}
-
-// 			.advant_column .advant__item{width: calc(50% - 20px);}
-// 		}
-// 	}
-// }
-
-// @media (max-width: 767px) {
-// 	.tabs-page{
-// 		&__list{gap: 35px;}
-// 		&__item{font-size: 1.3rem;}
-// 		&__item::after{height: 1px;}
-
-// 		&_line &__list{gap: 5px;}
-
-// 		&_line &__item{
-// 			font-size: 1.2rem;
-// 			padding-left: 5px;
-// 			padding-right: 5px;
-// 		}
-
-// 		&_line &__content-item{
-// 			font-size: 1rem;
-// 			padding-top: 15px;
-
-// 			ol, ul, p{margin-bottom: 1.5rem;}
-// 		}
-
-// 		.reviews-list{margin-top: 3px;}
-
-// 		&_btn &__list{gap: 4px;}
-
-// 		&_btn &__item{
-// 			height: 3rem;
-// 			min-width: 0;
-// 			border-radius: 1.5rem;
-// 			font-size: 0.7rem;
-// 			padding: 0 30px;
-// 		}
-
-// 		&_btn{
-// 			.advant_column{
-// 				gap: 16px;
-// 				.advant__label{font-size: 1.1rem;}
-		
-// 				.advant__item{
-// 					width: 100%;
-// 					flex-direction: row;
-// 					gap: 10px;
-// 				}
-		
-// 				.advant__label{text-align: left;}
-		
-// 				.advant__val{
-// 					width: 56px;
-// 					height: 56px;
-
-// 					.icon,
-// 					img{
-// 						max-width: 70%;
-// 						max-height: 70%;
-// 					}
-// 				}
-// 			}
-// 		}
-		
-
-// 	}
-// }
+@media (max-width: 767px) {
+	.tabs-page{
+		&__list{gap: 20px;}
+	}
+}

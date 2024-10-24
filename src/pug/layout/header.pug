@@ -7,7 +7,11 @@ header.header
 						a(href="#")
 							img(src="/assets/img/logo.svg", alt="")
 
-					.main-menu
+					.main-menu.js-main-menu
+						.main-menu__close.js-close-menu.d-md-none
+							span.ic-hamburger.active
+								span
+
 						ul
 							li.current-menu-item
 								a(href="#") Тарифы
@@ -24,4 +28,9 @@ header.header
 							a(href="#").social__item
 								+svg('ic-telegram','ic-telegram', '23', '19')
 
-						a.btn.btn_small(href='#') Вход
+						a.btn.btn_small(href='#')
+							+svg('ic-user','ic-user', '24', '24')
+							span Вход
+
+						span.ic-hamburger.js-open-menu.d-md-none
+							span

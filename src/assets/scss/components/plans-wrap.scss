@@ -2,3 +2,9 @@
 .plans-wrap{
 	.h1, .h2, h1, h2{margin-bottom: 5rem;}
 }
+
+@media (max-width: 767px) {
+	.plans-wrap{
+		.h1, .h2, h1, h2{margin-bottom: 3rem;}
+	}
+}
