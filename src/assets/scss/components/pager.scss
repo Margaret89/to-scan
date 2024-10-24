@@ -55,3 +55,15 @@
 		cursor: auto;
 	}
 }
+
+@media (max-width: 767px) {
+	.pager{
+		gap: 10px;
+
+		&__item{
+			width: 40px;
+			height: 40px;
+			font-size: 1.4rem;
+		}
+	}
+}

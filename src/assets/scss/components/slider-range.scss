@@ -78,3 +78,15 @@
 		left: 0;
 	}
 }
+
+@media (max-width: 767px) {
+	.slider-range{
+		.noUi-horizontal .noUi-tooltip{font-size: 1.4rem;}
+
+		&__labels{
+			width: calc(100% + 20px);
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+	}
+}

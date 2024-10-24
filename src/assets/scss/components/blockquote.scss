@@ -54,3 +54,22 @@ blockquote{
 		}
 	}
 }
+
+@media (max-width: 991px) {
+	blockquote{
+		p{font-size: 2.8rem;}
+	}
+}
+
+@media (max-width: 767px) {
+	blockquote{
+		padding-top: 45px;
+
+		&::before{
+			width: 30px;
+			height: 27px;
+		}
+
+		p{font-size: 2.4rem;}
+	}
+}

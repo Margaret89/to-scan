@@ -38,13 +38,17 @@ if($('.js-cases-slider').length){
 if($('.js-articles-slider').length){
 	const articlesSlider = new Swiper('.js-articles-slider',
 	{
-		// loop:true,
-		slidesPerView: 1.16,
+		slidesPerView: 1,
 		spaceBetween: 26,
 		navigation: {
 			nextEl: '.js-articles-slider-next',
 			prevEl: '.js-articles-slider-prev',
 		},
+		breakpoints: {
+			992: {
+				slidesPerView: 1.16,
+			}
+		}
 	});
 }
 

@@ -31,3 +31,7 @@
 	img{margin: 0;}
 	p+img{margin-top: 22px;}
 }
+
+@media (max-width: 767px) {
+	.design-block{padding: 30px 20px;}
+}

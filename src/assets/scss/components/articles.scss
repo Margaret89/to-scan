@@ -112,3 +112,34 @@
 		color: #8E8F9B;
 	}
 }
+
+@media (max-width: 1419px) {
+	.article-item{
+		&__img-wrap{width: 33%;}
+	}
+
+	.articles-page{
+		&__nav{
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	.articles-list{padding-left: 0;}
+}
+
+@media (max-width: 1279px) {
+	.articles-page{
+		.info-block{margin-top: 60px;}
+	}
+}
+
+@media (max-width: 767px) {
+	.article-item{
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 20px;
+
+		&__img-wrap{width: 320px;}
+	}
+}

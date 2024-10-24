@@ -229,6 +229,15 @@ button.btn{
 	margin-right: auto;
 }
 
+@media (max-width: 1419px) {
+	.header-page{
+		&__content{
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
 @media (max-width: 1199px) {
 	.container{max-width: 100%!important;}
 }
@@ -263,4 +272,20 @@ button.btn{
 
 	main{padding-bottom: 60px;}
 	.last-elem{margin-bottom: -60px;}
+
+	ul{
+		padding-left: 30px;
+
+		li::before{
+			width: 8px;
+			height: 8px;
+			margin-left: -30px;
+			margin-right: 22px;
+		}
+	}
+
+	img + p,
+	ul + img
+	{margin-top: 3rem;
+	}
 }

@@ -237,3 +237,54 @@
 		}
 	}
 }
+
+@media (max-width: 1279px) {
+	.tariff-item{
+		padding: 30px 20px;
+		&__title{font-size: 2.8rem;}
+	}
+
+	.tariff-item-price{
+		&__val{font-size: 2.1rem;}
+	}
+}
+
+@media (max-width: 991px) {
+	.tariffs{
+		&__title{font-size: 3.4rem;}
+		&__subtitle{font-size: 3rem;}
+		&__tag{font-size: 2.1rem;}
+	}
+
+	.tariffs-list{
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.tariff-item{width: 100%;}
+}
+
+@media (max-width: 767px) {
+	.tariffs{
+		&__title{
+			gap: 10px;
+			font-size: 3rem;
+		}
+
+		&__subtitle{font-size: 2.7rem;}
+		&__tag{font-size: 1.8rem;}
+	}
+
+	.tariffs-list{gap: 10px;}
+
+	.tariffs-type{
+		&__label{font-size: 1.4rem;}
+	}
+
+	.tariffs-slider{
+		flex-direction: column;
+		padding: 0;
+
+		&__content{padding: 40px 20px;}
+	}
+}
