@@ -59,6 +59,16 @@
 	&__name{
 		font-size: 1.4rem;
 		color: #21222D;
+
+		a{
+			color: #21222D;
+			text-decoration: none;
+
+			&:hover{
+				color: var(--color-primary);
+				text-decoration: underline;
+			}
+		}
 	}
 
 	&__post{

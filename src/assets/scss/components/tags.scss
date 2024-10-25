@@ -21,4 +21,5 @@ a.tags__item:hover,
 a.tags__item.active{
 	background: var(--color-primary);
 	color: #fff;
+	cursor: pointer;
 }

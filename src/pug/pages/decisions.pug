@@ -105,7 +105,7 @@ block content
 								{icon:'ic-guarantee', icon_width:'27', icon_height:'30', text:'Обходит большинство видов защит от ботов'},
 							]
 						each item in list
-							.service-item(class=item.status?'active':'')
+							.service-item
 								.service-item__icon
 									+svg(item.icon, item.icon, item.icon_width, item.icon_height)
 
@@ -258,7 +258,7 @@ block content
 								
 							]
 						each item in list
-							.service-item(class=item.status?'active':'', class=item.size?'service-item_big':'',)
+							.service-item(class=item.size?'service-item_big':'',)
 								.service-item__icon
 									+svg(item.icon, item.icon, item.icon_width, item.icon_height)
 

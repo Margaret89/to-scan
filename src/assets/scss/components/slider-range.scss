@@ -21,6 +21,32 @@
 	// 	box-shadow: none;
 	// }
 
+	.noUi-value-horizontal{display: none;}
+
+	.noUi-pips-horizontal{
+		height: 1px;
+		padding: 0;
+	}
+
+	.noUi-marker-horizontal{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		border: 2px solid #D1D2DF;
+		box-sizing: border-box;
+		background: #fff;
+		margin-top: -6px;
+		margin-left: -5px;
+	}
+
+	.noUi-marker-horizontal.active{
+		border-color: var(--color-primary);
+		z-index: 10;
+	}
+
 	.noUi-horizontal .noUi-handle{
 		width: 16px;
 		height: 16px;

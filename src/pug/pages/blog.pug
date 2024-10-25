@@ -85,7 +85,7 @@ block content
 											=item.author
 
 										.article-actions
-											.article-actions__item
+											a(href="#").article-actions__item
 												.article-actions__icon
 													+svg('ic-like','ic-like', '22', '22')
 												.article-actions__val 25
@@ -105,7 +105,7 @@ block content
 
 									.tags
 										each tag in item.tags
-											.tags__item= tag
+											a(href="#").tags__item= tag
 
 									.article-item__desc= item.text
 

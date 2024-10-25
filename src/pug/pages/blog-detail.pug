@@ -23,7 +23,7 @@ block content
 							h1 Lorem ipsum dolor sit amet
 
 							.article-actions
-								.article-actions__item
+								a(href="#").article-actions__item
 									.article-actions__icon
 										+svg('ic-like','ic-like', '22', '22')
 									.article-actions__val 25
@@ -44,7 +44,8 @@ block content
 										img(src="assets/img/ava.jpg", alt="")
 
 									.article-detail-article__content
-										.article-detail-article__name И. Длиннофамильный
+										.article-detail-article__name
+											a(href="#") И. Длиннофамильный
 										.article-detail-article__post Совладелец рекламного агенства “Ковалевы”
 
 								.social
@@ -168,7 +169,7 @@ block content
 												.article-item__top
 													.article-item__author
 														+svg('ic-user','ic-user', '24', '24')
-														=item.author
+														a(href="#")= item.author
 
 													.article-actions
 														.article-actions__item
@@ -191,7 +192,7 @@ block content
 
 												.tags
 													each tag in item.tags
-														.tags__item= tag
+														a(href="#").tags__item= tag
 
 												.article-item__desc= item.text
 

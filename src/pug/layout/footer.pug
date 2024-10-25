@@ -5,14 +5,18 @@ footer.footer
 				.footer__wrap
 					.footer__top
 						.footer__logo
-							img(src="/assets/img/logo.svg", alt="")
+							a(href="#")
+								img(src="/assets/img/logo.svg", alt="")
 
 						.footer__content
 							.main-menu
 								ul
-									li Тарифы
-									li Блог
-									li Решения
+									li.current-menu-item
+										a(href="#")  Тарифы
+									li
+										a(href="#") Блог
+									li
+										a(href="#") Решения
 
 							.social
 								a(href="#").social__item
