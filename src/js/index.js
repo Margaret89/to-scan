@@ -52,36 +52,35 @@ if($('.js-articles-slider').length){
 	});
 }
 
+
 // range-slider
 if($('.js-slider-range').length){
+	let jsonData = $("#json-data").text();
+	// Преобразуем строку в объект
+	try {
+		var plansData = JSON.parse(jsonData);
+	} catch (e) {
+		$("#output").html("Ошибка при обработке данных!");
+		console.error("Ошибка парсинга JSON: ", e);
+	}
+
+	function updatePrices() {
+		const val = document.getElementById('slider-range').noUiSlider.get();//Получаем значение слайдера
+		const tarifType = $('input[name="tariffs-type"]:checked').val();//Получаем тип плана
+		const tarifSale = $('input[name="tariffs-type"]:checked').data('sale');//Получаем скидку
+
+		$.each(plansData.plans, function(index, plan) { // проходимся по всем планам
+			const price = tarifType === 'yearly' // если оплата за месяц
+			? plan.monthly[val] * (100 - tarifSale) / 100 // берем тарифы на год
+			: plan.monthly[val]; //иначе, берем тарифы на месяц
+			
+		  $(plan.tariff_id).find('.js-tariff-item-price-val').text(price); // заменяем цены
+		});
+	  }
+
 	$('.js-slider-range').each(function(indx, element){
 		var slider = document.getElementById($(element).attr('id'));
-		var minRange = parseFloat(slider.getAttribute('data-min'));
-		var maxRange = parseFloat(slider.getAttribute('data-max'));
-		var start = parseFloat(slider.getAttribute('data-cur-min'));
-		var finish = parseFloat(slider.getAttribute('data-cur-max'));
-		
-		// noUiSlider.create(slider, {
-		// 	start: [start, finish],
-		// 	// step: [2000, 5000, 10000, 20000, 50000, 100000, 200000, 500000, 1000000],
-			
-		// 	// pips: {
-		// 	// 	mode: 'positions',
-		// 	// 	values: [1000, 2000, 5000, 10000, 20000, 50000, 100000, 200000, 500000, 1000000, 5000000],
-		// 	// 	density: 4
-		// 	// },
-		// 	connect: true,
-		// 	tooltips: [
-		// 		wNumb({decimals: 0, thousand: ' '}),
-		// 		wNumb({decimals: 0, thousand: ' '})
-		// 	],
-		// 	range: {
-		// 		'min': minRange,
-		// 		'max': maxRange
-		// 	},
-		// });
-
-		var arbitraryValuesForSlider = ['1 000', '2 000', '5 000', '10 000', '20 000', '50 000', '100 000', '200 000', '500 000', '1 000 000', '5 000 000'];
+		var arbitraryValuesForSlider = slider.getAttribute('data-step').split(', ');
 
 		var format = {
 			to: function(value) {
@@ -93,7 +92,7 @@ if($('.js-slider-range').length){
 		};
 
 		noUiSlider.create(slider, {
-			start: '1 000',
+			start: arbitraryValuesForSlider[0],
 			range: { min: 0, max: arbitraryValuesForSlider.length - 1 },
 			step: 1,
 			tooltips: true,
@@ -121,8 +120,16 @@ if($('.js-slider-range').length){
 			for (let index = 0; index < curElemId; index++) {
 				slider.querySelector('.noUi-marker[data-id="' + index + '"]').classList.add('active');
 			}
+
+			updatePrices();
 		});
 	});
+	
+	//Изменение типа тарифа
+	$('.js-tariffs-type-check').on('change', function() {
+		updatePrices();
+	});
+
 }
 
 if($('.js-open-menu').length){

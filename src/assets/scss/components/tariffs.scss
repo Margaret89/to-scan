@@ -58,24 +58,31 @@
 		padding-bottom: 15px;
 		transition: color 0.2s ease 0s;
 		cursor: pointer;
+	}
 
-		&::after{
-			content: '';
-			width: 0;
-			height: 2px;
-			background: var(--color-primary);
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			transition: width 0.2s ease 0s;
-		}
+	&__content{position: relative;}
 
-		&:hover{color: var(--color-primary);}
+	&__content::after{
+		content: '';
+		width: 0;
+		height: 2px;
+		background: var(--color-primary);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		transition: width 0.2s ease 0s;
+	}
 
-		&:hover::after,
-		&.active::after{
-			width: 100%;
-		}
+	input[type="radio"]{display: none;}
+
+	input[type="radio"]:checked ~ .tariffs-type__content,
+	&__content:hover{
+		color: var(--color-primary);
+	}
+
+	input[type="radio"]:checked ~ &__content::after,
+	&__content:hover::after{
+		width: 100%;
 	}
 
 	&__label{

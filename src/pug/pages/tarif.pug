@@ -16,6 +16,63 @@ block content
 	section.tariffs
 		.container
 			.row
+				#json-data(style='display:none;')
+					| {
+					| "plans": [
+					| {
+					| "tariff_id": "#tariff-1",
+					| "monthly": {
+					| "1 000": 189.9,
+					| "2 000": 360,
+					| "5 000": 850,
+					| "10 000": 1600,
+					| "20 000": 3000,
+					| "50 000": 7000,
+					| "100 000": 13000,
+					| "200 000": 24000,
+					| "500 000": 29000,
+					| "1 000 000": 33000,
+					| "5 000 000": 33000
+					| }
+					| },
+					| {
+					| "tariff_id": "#tariff-2",
+					| "monthly": {
+					| "1 000": 490,
+					| "2 000": 950,
+					| "5 000": 2200,
+					| "10 000": 4200,
+					| "20 000": 8000,
+					| "50 000": 18500,
+					| "100 000": 35000,
+					| "200 000": 42000,
+					| "500 000": 48000,
+					| "1 000 000": 52000,
+					| "5 000 000": 52000
+					| }
+					| },
+					| {
+					| "tariff_id": "#tariff-3",
+					| "monthly": {
+					| "1 000": 1200,
+					| "2 000": 2300,
+					| "5 000": 5400,
+					| "10 000": 10000,
+					| "20 000": 19000,
+					| "50 000": 43000,
+					| "100 000": 65000,
+					| "200 000": 75000,
+					| "500 000": 83000,
+					| "1 000 000": 90000,
+					| "5 000 000": 90000
+					| }
+					| }
+					| ]
+					| }
+
+
+
+
 				.col-xxl-10.offset-xxl-1
 					.tariffs__top
 						.tariffs__title Тестовый период
@@ -26,11 +83,17 @@ block content
 						a(href="#").btn Сканировать
 
 					.tariffs-type
-						.tariffs-type__item.active Месяц
+						label.tariffs-type__item
+							input(type="radio", name="tariffs-type", class="js-tariffs-type-check", checked="checked", value="monthly")
+							.tariffs-type__content
+								.tariffs-type__val Месяц
 
-						.tariffs-type__item Год
-							.tariffs-type__label -20
-								span.tariffs-type__percent %
+						label.tariffs-type__item
+							input(type="radio", name="tariffs-type", class="js-tariffs-type-check", value="yearly", data-sale="20")
+							.tariffs-type__content
+								.tariffs-type__val Год
+								.tariffs-type__label -20
+									span.tariffs-type__percent %
 
 					.tariffs-slider
 						.tariffs-slider__label Число страниц для ежедневного сканирования
@@ -38,7 +101,7 @@ block content
 						.tariffs-slider__content
 							.slider-range
 								.slider-range__field
-									#slider-range.js-slider-range(data-min="1000", data-max="5000000", data-cur-min="1000",data-cur-max="2500000", autocomplete="off")
+									#slider-range.js-slider-range(data-step="1 000, 2 000, 5 000, 10 000, 20 000, 50 000, 100 000, 200 000, 500 000, 1 000 000, 5 000 000", autocomplete="off")
 
 								.slider-range__labels
 									.slider-range__val 1 000
@@ -47,17 +110,20 @@ block content
 					.tariffs-list
 						-
 							var list=[
-								{title:'1 месяц', price:'7.00 USD'},
-								{title:'6 месяцев', price:'7.00 USD', status:'active'},
-								{title:'Индивидуальный', price:'от 40.00 USD'},
+								{id:'1', title:'1 месяц', price:'189.9'},
+								{id:'2', title:'6 месяцев', price:'490', status:'active'},
+								{id:'3', title:'Индивидуальный', price:'1200'},
 							]
 						each item in list
-							.tariff-item
+							.tariff-item(id="tariff-"+item.id)
 								.tariff-item__title= item.title
 
 								.tariff-item-price
 									.tariff-item-price__label Цена
-									.tariff-item-price__val= item.price
+									.tariff-item-price__val
+										span.js-tariff-item-price-val= item.price
+										| 
+										| руб/мес
 
 								.tariff-item-params
 									.tariff-item-params__item
@@ -100,3 +166,4 @@ block content
 
 						.about__img
 							img(src="assets/img/about.jpg", alt="")
+	
